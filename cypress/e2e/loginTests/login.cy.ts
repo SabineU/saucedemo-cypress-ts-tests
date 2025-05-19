@@ -70,7 +70,7 @@ describe('SauceDemo Login Tests', () => {
     loginPage.enterUsername(this.loginData.lockedOutUser.username);
     loginPage.enterPassword(this.loginData.lockedOutUser.password);
     loginPage.clickLogin();
-    loginPage.assertLoginErrorVisible("Epic sadface: Sorry, this user has been locked out.");
+    loginPage.assertLoginErrorVisible("TEST Epic sadface: Sorry, this user has been locked out.");
   });
 
   it("TC-LOG-007: Close login error message with X icon", function () {
