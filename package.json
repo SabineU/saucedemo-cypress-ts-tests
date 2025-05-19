@@ -1,0 +1,23 @@
+{
+  "name": "saucedemo-cypress-ts-tests",
+  "version": "1.0.0",
+  "description": "Saucedemo Cypress TypeScript Tests",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress run --env allure=true",
+    "generateReport": "allure generate allure-results --clean -o allure-report",
+    "test": "npm run cypress || npm run posttest",
+    "posttest": "npm run generateReport",
+    "openReport": "allure open ./allure-report"
+  },
+  "author": "SabineU",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.34.0",
+    "cypress": "^14.3.3"
+  },
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
