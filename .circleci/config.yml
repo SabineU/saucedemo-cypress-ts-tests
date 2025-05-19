@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@4.1
 
 jobs:
-  demo-tests:
+  saucedemo-cypress-ts-tests:
     docker:
       - image: cimg/node:22.15.1-browsers
     working_directory: ~/repo
@@ -24,7 +24,7 @@ workflows:
   version: 2
   commit:
     jobs:
-      - demo-tests
+      - saucedemo-cypress-ts-tests
   periodical:
     triggers:
       - schedule:
@@ -34,4 +34,4 @@ workflows:
               only:
                 - main
     jobs:
-      - demo-tests
+      - saucedemo-cypress-ts-tests
